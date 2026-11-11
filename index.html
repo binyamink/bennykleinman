@@ -6,207 +6,238 @@
 <title>Benny Kleinman</title>
 <meta name="description" content="Benny Kleinman, Assistant Professor of Economics at Stanford University. Research on international trade, spatial economics, and macroeconomics.">
 <meta property="og:title" content="Benny Kleinman">
-<meta property="og:image" content="photo.jpg">
+<meta property="og:description" content="Assistant Professor of Economics, Stanford University">
+<meta property="og:image" content="https://www.bennykleinman.com/photo.jpg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;1,400&family=Merriweather:ital,wght@0,300;0,700;1,300&family=Montserrat:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root { --link: #1a4d8c; --text: #1a1a1a; --muted: #333; }
+  :root {
+    --cardinal: #8C1515;
+    --cardinal-dark: #6b0f0f;
+    --text: #2e2d29;
+    --muted: #5f5f5c;
+    --line: #e4e2dd;
+    --chip: #f6f4f1;
+  }
   * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; }
   body {
     margin: 0;
-    font-family: "Merriweather", Georgia, serif;
-    font-weight: 300;
-    font-size: 15px;
-    line-height: 1.75;
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: 17px;
+    line-height: 1.65;
     color: var(--text);
     background: #fff;
   }
-  a { color: var(--link); }
-  .topbar { display: flex; align-items: center; gap: 22px; padding: 14px 34px; }
-  .topbar img { height: 32px; width: auto; display: block; }
-  .topbar .site-name { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 19px; color: #222; }
-  .wrap { max-width: 920px; margin: 0 auto; padding: 0 24px; }
-  h1, h2, h3 { font-family: "Bitter", Georgia, serif; font-weight: 400; color: #000; }
-  h1.name { text-align: center; font-size: 46px; margin: 56px 0 72px; }
-  .intro { display: flex; gap: 32px; align-items: flex-start; }
-  .intro .bio { flex: 1; text-align: justify; }
-  .intro img { width: 212px; height: auto; display: block; }
-  .intro p { margin: 0 0 14px; }
-  .contact-label { font-weight: 700; margin-top: 28px !important; }
-  .sep { color: #666; margin: 0 6px; }
-  hr { border: 0; border-top: 1px solid #bbb; margin: 28px 0 0; }
-  h2.section { text-align: center; font-size: 46px; margin: 40px 0 40px; }
-  h3 { font-size: 23px; margin: 56px 0 36px; }
+  a { color: var(--cardinal); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* Header */
+  .topbar {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(255,255,255,0.96);
+    border-bottom: 1px solid var(--line);
+  }
+  .topbar-inner {
+    max-width: 880px; margin: 0 auto; padding: 12px 24px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .topbar img { height: 34px; width: auto; display: block; }
+  .topbar nav { display: flex; gap: 26px; font-family: "Source Sans 3", Arial, sans-serif; font-size: 15px; font-weight: 500; letter-spacing: .02em; }
+  .topbar nav a { color: var(--text); }
+  .topbar nav a:hover { color: var(--cardinal); text-decoration: none; }
+
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+  /* Intro */
+  .intro { display: flex; gap: 44px; align-items: center; padding: 64px 0 56px; }
+  .intro .bio { flex: 1; }
+  .intro h1 { font-family: "Bitter", Georgia, serif; font-weight: 600; font-size: 44px; line-height: 1.15; margin: 0 0 6px; color: #000; }
+  .intro .role { font-family: "Source Sans 3", Arial, sans-serif; font-size: 17px; color: var(--muted); margin: 0 0 22px; }
+  .intro p { margin: 0 0 16px; }
+  .intro img.photo { width: 230px; height: auto; border-radius: 6px; display: block; box-shadow: 0 2px 14px rgba(0,0,0,.08); }
+  .contact { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 22px; font-family: "Source Sans 3", Arial, sans-serif; font-size: 15.5px; }
+  .contact a { display: inline-flex; align-items: center; gap: 7px; color: var(--text); }
+  .contact a:hover { color: var(--cardinal); text-decoration: none; }
+  .contact svg { width: 17px; height: 17px; fill: none; stroke: var(--cardinal); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* Sections */
+  section.list { border-top: 1px solid var(--line); padding: 44px 0 12px; }
+  h2 { font-family: "Bitter", Georgia, serif; font-weight: 600; font-size: 26px; margin: 0 0 28px; color: #000; }
+
+  /* Papers */
   .paper { margin: 0 0 30px; }
-  .paper .title { font-weight: 700; }
-  .paper .extra a { color: var(--text); }
-  .paper .coauthor { color: var(--text); }
-  .paper .venue { display: block; }
-  footer { margin: 80px 0 40px; font-size: 12px; color: #777; text-align: center; }
+  .paper .title { display: block; font-weight: 600; font-size: 18.5px; line-height: 1.4; }
+  .paper .meta { display: block; color: var(--muted); font-size: 16px; margin-top: 3px; }
+  .paper .meta a { color: var(--muted); }
+  .paper .meta a:hover { color: var(--cardinal); }
+  .paper .links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 9px; }
+  .paper .links a {
+    font-family: "Source Sans 3", Arial, sans-serif; font-size: 13.5px; font-weight: 500;
+    color: var(--text); background: var(--chip); border: 1px solid var(--line);
+    padding: 2px 10px; border-radius: 999px; line-height: 1.6;
+  }
+  .paper .links a:hover { color: #fff; background: var(--cardinal); border-color: var(--cardinal); text-decoration: none; }
+
+  footer { border-top: 1px solid var(--line); margin-top: 40px; padding: 26px 0 40px; font-family: "Source Sans 3", Arial, sans-serif; font-size: 14px; color: var(--muted); text-align: center; }
+
   @media (max-width: 680px) {
-    h1.name, h2.section { font-size: 36px; margin: 48px 0 36px; }
-    .intro { flex-direction: column-reverse; align-items: center; }
-    .intro .bio { text-align: left; }
+    body { font-size: 16.5px; }
+    .topbar nav { gap: 16px; font-size: 14px; }
+    .topbar img { height: 28px; }
+    .intro { flex-direction: column-reverse; align-items: flex-start; gap: 24px; padding: 36px 0 40px; }
+    .intro img.photo { width: 160px; }
+    .intro h1 { font-size: 36px; }
   }
 </style>
 </head>
 <body>
-<header class="topbar">
-  <a href="https://www.stanford.edu/"><img src="stanford-wordmark.png" alt="Stanford University"></a>
-  <span class="site-name">Benny Kleinman</span>
-</header>
-<div class="wrap">
 
-<h1 class="name">Benny Kleinman</h1>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="https://www.stanford.edu/"><img src="stanford-wordmark.png" alt="Stanford University"></a>
+    <nav>
+      <a href="#working-papers">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="https://drive.google.com/file/d/19pyhPtFAmM6ek5MfITnjPmLK5Vb5W4-4/view?usp=sharing">CV</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
 
 <section class="intro">
   <div class="bio">
+    <h1>Benny Kleinman</h1>
+    <p class="role">Assistant Professor of Economics, Stanford University</p>
     <p>Welcome! I am an <a href="https://economics.stanford.edu/">Assistant Professor of Economics</a> and the Sakurako and William Fisher Family Faculty Scholar at Stanford University. I am also a Faculty Fellow at the <a href="https://siepr.stanford.edu/people/benny-kleinman">Stanford Institute for Economic Policy Research</a> and a Faculty Research Fellow at the <a href="https://www.nber.org/people/bennyklein?page=1&amp;perPage=50">National Bureau of Economic Research</a>. My research focuses on international trade, spatial economics, and macroeconomics.</p>
-    <p>You can find my CV <a href="https://drive.google.com/file/d/19pyhPtFAmM6ek5MfITnjPmLK5Vb5W4-4/view?usp=sharing"><strong>here</strong></a>.</p>
-    <p class="contact-label">Contact</p>
-    <p>
-      <a href="mailto:bennyk@stanford.edu">bennyk@stanford.edu</a><span class="sep">&#9633;</span>
-      Twitter <a href="https://twitter.com/BennyKleinman">@BennyKleinman</a><span class="sep">&#9633;</span>
-      <a href="https://scholar.google.co.il/citations?user=1zU6ZgYAAAAJ&amp;hl=en&amp;oi=ao">Google Scholar</a>
-    </p>
+    <p>You can find my CV <a href="https://drive.google.com/file/d/19pyhPtFAmM6ek5MfITnjPmLK5Vb5W4-4/view?usp=sharing">here</a>.</p>
+    <div class="contact">
+      <a href="mailto:bennyk@stanford.edu"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>bennyk@stanford.edu</a>
+      <a href="https://twitter.com/BennyKleinman"><svg viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20"/></svg>@BennyKleinman</a>
+      <a href="https://scholar.google.co.il/citations?user=1zU6ZgYAAAAJ&amp;hl=en&amp;oi=ao"><svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>Google Scholar</a>
+      <a href="https://www.nber.org/people/bennyklein?page=1&amp;perPage=50"><svg viewBox="0 0 24 24"><path d="M3 10l9-6 9 6"/><path d="M5 10v9M9.5 10v9M14.5 10v9M19 10v9M3 20h18"/></svg>NBER</a>
+      <a href="https://siepr.stanford.edu/people/benny-kleinman"><svg viewBox="0 0 24 24"><path d="M4 20V8l8-4 8 4v12"/><path d="M4 20h16M10 20v-5h4v5"/></svg>SIEPR</a>
+    </div>
   </div>
-  <img src="photo.jpg" alt="Benny Kleinman">
+  <img class="photo" src="photo.jpg" alt="Benny Kleinman">
 </section>
 
-<hr>
-
-<h2 class="section">Research</h2>
-
 <!-- ============ WORKING PAPERS ============ -->
-<h3>Working Papers</h3>
+<section class="list" id="working-papers">
+<h2>Working Papers</h2>
 
-<p class="paper">
+<div class="paper">
   <a class="title" href="https://drive.google.com/file/d/1ZEtUZ0lLO8Kb7oWRK1aTpDwsN4u1MHvw/view?usp=sharing">Wage Inequality and the Spatial Expansion of Firms</a>
-  <span class="venue">Revise and resubmit, <em>Quarterly Journal of Economics</em></span>
-</p>
+  <span class="meta">Revise and resubmit, <em>Quarterly Journal of Economics</em></span>
+</div>
 
-<p class="paper">
-  <a class="title" href="http://castrovincenzi.com/s/LaborShare.pdf">Intermediate Input Prices and the Labor Share</a>, with
-  <a class="coauthor" href="https://www.castrovincenzi.com/">Juanma Castro-Vincenzi</a>
-  <span class="venue">Accepted, <em>Journal of Political Economy</em></span>
-</p>
+<div class="paper">
+  <a class="title" href="http://castrovincenzi.com/s/LaborShare.pdf">Intermediate Input Prices and the Labor Share</a>
+  <span class="meta">with <a href="https://www.castrovincenzi.com/">Juanma Castro-Vincenzi</a> · Accepted, <em>Journal of Political Economy</em></span>
+</div>
 
-<p class="paper">
-  <a class="title" href="https://www.dropbox.com/scl/fi/72t6men38tn4mrcptgg5i/NGIW_Paper.pdf?rlkey=149kzg4ot45zziy8kz4sc76ct&amp;e=1&amp;dl=0">Neoclassical Growth in an Interdependent World</a>, with
-  <a class="coauthor" href="https://ernestliu.scholar.princeton.edu/">Ernest Liu</a>,
-  <a class="coauthor" href="https://stephenredding.github.io/">Stephen Redding</a>, and
-  <a class="coauthor" href="https://sites.google.com/site/motohiroyogo/">Motohiro Yogo</a>
-  <span class="extra">
-    <a href="https://www.dropbox.com/scl/fi/56uhzgm5ysf02wefd5ow8/NGIW_Appendix.pdf?rlkey=0789ouhhfzaybctc2kknzblnj&amp;e=1&amp;dl=0">[Online Appendix]</a>
-    <a href="https://cepr.org/voxeu/columns/neoclassical-growth-interdependent-world">[VoxEU Article]</a>
-    <a href="https://bfi.uchicago.edu/insight/research-summary/neoclassical-growth-in-an-interdependent-world/">[Becker Friedman Research Brief]</a>
+<div class="paper">
+  <a class="title" href="https://www.dropbox.com/scl/fi/72t6men38tn4mrcptgg5i/NGIW_Paper.pdf?rlkey=149kzg4ot45zziy8kz4sc76ct&amp;e=1&amp;dl=0">Neoclassical Growth in an Interdependent World</a>
+  <span class="meta">with <a href="https://ernestliu.scholar.princeton.edu/">Ernest Liu</a>, <a href="https://stephenredding.github.io/">Stephen Redding</a>, and <a href="https://sites.google.com/site/motohiroyogo/">Motohiro Yogo</a> · Revise and resubmit, <em>American Economic Review</em></span>
+  <span class="links">
+    <a href="https://www.dropbox.com/scl/fi/56uhzgm5ysf02wefd5ow8/NGIW_Appendix.pdf?rlkey=0789ouhhfzaybctc2kknzblnj&amp;e=1&amp;dl=0">Online Appendix</a>
+    <a href="https://cepr.org/voxeu/columns/neoclassical-growth-interdependent-world">VoxEU</a>
+    <a href="https://bfi.uchicago.edu/insight/research-summary/neoclassical-growth-in-an-interdependent-world/">Becker Friedman Research Brief</a>
   </span>
-  <span class="venue">Revise and resubmit, <em>American Economic Review</em></span>
-</p>
+</div>
 
-<p class="paper">
-  <a class="title" href="https://drive.google.com/file/d/1LN06MsbGbBXpthRznzNt5sZI4uWAldvb/view">Location Effects or Sorting? Evidence from Firm Relocation</a>, with
-  <a class="coauthor" href="https://www.paulinecarry.com/home">Pauline Carry</a> and
-  <a class="coauthor" href="https://www.nimierdavid.com/">Elio Nimier-David</a>
-  <span class="venue">Revise and resubmit, <em>Econometrica</em></span>
-</p>
+<div class="paper">
+  <a class="title" href="https://drive.google.com/file/d/1LN06MsbGbBXpthRznzNt5sZI4uWAldvb/view">Location Effects or Sorting? Evidence from Firm Relocation</a>
+  <span class="meta">with <a href="https://www.paulinecarry.com/home">Pauline Carry</a> and <a href="https://www.nimierdavid.com/">Elio Nimier-David</a> · Revise and resubmit, <em>Econometrica</em></span>
+</div>
 
-<p class="paper">
-  <a class="title" href="https://drive.google.com/file/d/1rH7vl10MDYeARCheBRQnyZt0aegVoo9y/view?usp=sharing">The Geography of Innovative Firms</a>, with
-  <a class="coauthor" href="https://economics.uchicago.edu/directory/Craig-Chikis">Craig A. Chikis</a> and
-  <a class="coauthor" href="https://www.martaprato.com/home">Marta Prato</a>
-  <span class="extra">
-    <a href="https://www.nber.org/be/20261/geographic-expansion-innovative-firms">[NBER Bulletin on Entrepreneurship]</a>
+<div class="paper">
+  <a class="title" href="https://drive.google.com/file/d/1rH7vl10MDYeARCheBRQnyZt0aegVoo9y/view?usp=sharing">The Geography of Innovative Firms</a>
+  <span class="meta">with <a href="https://economics.uchicago.edu/directory/Craig-Chikis">Craig A. Chikis</a> and <a href="https://www.martaprato.com/home">Marta Prato</a></span>
+  <span class="links">
+    <a href="https://www.nber.org/be/20261/geographic-expansion-innovative-firms">NBER Bulletin on Entrepreneurship</a>
   </span>
-</p>
+</div>
 
-<p class="paper">
-  <a class="title" href="https://www.dropbox.com/scl/fi/en7hyikpnisz8gdesb16p/ITUW_Paper.pdf?rlkey=j2hqcfk0b5zj47bsbplekdv2v&amp;e=1&amp;dl=0">International Trade in an Uncertain World</a>, with
-  <a class="coauthor" href="https://ernestliu.scholar.princeton.edu/">Ernest Liu</a>,
-  <a class="coauthor" href="https://stephenredding.github.io/">Stephen Redding</a>, and
-  <a class="coauthor" href="https://economics.stanford.edu/people/david-xu">David Xu</a>
-  <span class="extra">
-    <a href="https://www.dropbox.com/scl/fi/cgfrgdn83xa3hdhdhxkz4/ITUW_Appendix.pdf?rlkey=khihyf00j11tuzfzbd8rorcei&amp;e=1&amp;dl=0">[Online Appendix]</a>
+<div class="paper">
+  <a class="title" href="https://www.dropbox.com/scl/fi/en7hyikpnisz8gdesb16p/ITUW_Paper.pdf?rlkey=j2hqcfk0b5zj47bsbplekdv2v&amp;e=1&amp;dl=0">International Trade in an Uncertain World</a>
+  <span class="meta">with <a href="https://ernestliu.scholar.princeton.edu/">Ernest Liu</a>, <a href="https://stephenredding.github.io/">Stephen Redding</a>, and <a href="https://economics.stanford.edu/people/david-xu">David Xu</a></span>
+  <span class="links">
+    <a href="https://www.dropbox.com/scl/fi/cgfrgdn83xa3hdhdhxkz4/ITUW_Appendix.pdf?rlkey=khihyf00j11tuzfzbd8rorcei&amp;e=1&amp;dl=0">Online Appendix</a>
   </span>
-</p>
+</div>
 
-<p class="paper">
-  <a class="title" href="https://drive.google.com/file/d/1tPkGjfQBN6fyQT905McN08kFAKweoYoT/view?usp=sharing">Non-Rivalry and Trade in Services</a>, with
-  <a class="coauthor" href="https://economics.stanford.edu/people/tamar-yerushalmi">Tamar Yerushalmi</a>
-</p>
+<div class="paper">
+  <a class="title" href="https://drive.google.com/file/d/1tPkGjfQBN6fyQT905McN08kFAKweoYoT/view?usp=sharing">Non-Rivalry and Trade in Services</a>
+  <span class="meta">with <a href="https://economics.stanford.edu/people/tamar-yerushalmi">Tamar Yerushalmi</a></span>
+</div>
+</section>
 
 <!-- ============ PUBLICATIONS ============ -->
-<h3>Publications</h3>
+<section class="list" id="publications">
+<h2>Publications</h2>
 
-<p class="paper">
-  <a class="title" href="https://www.dropbox.com/scl/fi/s49p0vf9t9nhohtteep94/JEPTD_Paper.pdf?rlkey=cijw7fmhezqlklv48vqinnfq6&amp;dl=0">Dynamic Effects of Trade</a>, with
-  <a class="coauthor" href="https://ernestliu.scholar.princeton.edu/">Ernest Liu</a> and
-  <a class="coauthor" href="https://stephenredding.github.io/">Stephen Redding</a>
-  <span class="extra">
-    <a href="https://www.nber.org/papers/w35595">[NBER Working Paper]</a>
+<div class="paper">
+  <a class="title" href="https://www.dropbox.com/scl/fi/s49p0vf9t9nhohtteep94/JEPTD_Paper.pdf?rlkey=cijw7fmhezqlklv48vqinnfq6&amp;dl=0">Dynamic Effects of Trade</a>
+  <span class="meta">with <a href="https://ernestliu.scholar.princeton.edu/">Ernest Liu</a> and <a href="https://stephenredding.github.io/">Stephen Redding</a> · <em>Journal of Economic Perspectives</em>, forthcoming</span>
+  <span class="links">
+    <a href="https://www.nber.org/papers/w35595">NBER Working Paper</a>
   </span>
-  <span class="venue"><em>Journal of Economic Perspectives</em>, forthcoming</span>
-</p>
-
-<p class="paper">
-  <a class="title" href="https://www.dropbox.com/scl/fi/vs49sbinp1jhqmqed74l1/SSTD_Paper.pdf?rlkey=ezb3bbejbw461h33s9a0wec84&amp;dl=0">Dynamic Spatial General Equilibrium</a>, with
-  <a class="coauthor" href="https://ernestliu.scholar.princeton.edu/">Ernest Liu</a> and
-  <a class="coauthor" href="https://stephenredding.github.io/">Stephen Redding</a>
-  <span class="extra">
-    <a href="https://onlinelibrary.wiley.com/doi/full/10.3982/ECTA20273">[Published Version]</a>
-    <a href="https://www.dropbox.com/scl/fi/ztd65mqcvm2kdlbmg05aq/SSTD_Appendix.pdf?rlkey=hbbf63jkzi55ul71wblim5ugr&amp;dl=0">[Online Appendix]</a>
-    <a href="https://www.dropbox.com/scl/fi/jxzzeidxbyysgnpj7woza/SSTD_Supplement.pdf?rlkey=73uvl6wqchxc8a55ue5e5rurc&amp;dl=0">[Online Supplement]</a>
-    <a href="https://www.dropbox.com/scl/fi/83xrxo0my9pqz7o8txpde/DSGE_Toolkit.zip?rlkey=hqrwe33dzvqia2mwkooxfjlo5&amp;dl=0">[Model Economy Toolkit]</a>
-    <a href="https://www.dropbox.com/scl/fi/grmnd5q971w6p3bbxvvn5/SSTD_present.pdf?rlkey=2jwefdtvfh07kdblnjr997ke1&amp;dl=0">[Presentation Slides]</a>
-    <a href="https://www.econometricsociety.org/publications/econometrica/2023/03/01/Dynamic-Spatial-General-Equilibrium/supp/20273_Data_and_Programs.zip">[Data and Code]</a>
-  </span>
-  <span class="venue"><em>Econometrica</em>, 91(2), 385&ndash;424, 2023 (lead article)</span>
-</p>
-
-<p class="paper">
-  <a class="title" href="https://www.dropbox.com/scl/fi/lwhbqfo25yuty52pkil4a/IFE_Paper.pdf?rlkey=fapa4be3g1kgfgi9otfhwdr2p&amp;dl=0">International Friends and Enemies</a>, with
-  <a class="coauthor" href="https://ernestliu.scholar.princeton.edu/">Ernest Liu</a> and
-  <a class="coauthor" href="https://stephenredding.github.io/">Stephen Redding</a>
-  <span class="extra">
-    <a href="https://www.aeaweb.org/articles?id=10.1257/mac.20220223">[Published Version]</a>
-    <a href="https://www.dropbox.com/scl/fi/wizhbbk0qrzbugsavjhfm/IFE_Appendix.pdf?rlkey=73tzqnph4pfzlfarnt2ysvywi&amp;dl=0">[Online Appendix]</a>
-    <a href="https://www.dropbox.com/scl/fi/pdsek5uyyv5lszn17ar8e/IFE_present_20March2022sr_dist.pdf?rlkey=ksum49kgr3wdm9osdhtvjin5m&amp;dl=0">[Presentation Slides]</a>
-    <a href="https://doi.org/10.3886/E194041V1">[Data and Code]</a>
-    <a href="https://blogs.lse.ac.uk/businessreview/2020/09/15/productivity-growth-in-one-country-affects-the-relative-income-and-welfare-of-its-trade-partners/">[LSE Business Review Article]</a>
-    <a href="https://voxeu.org/article/modelling-evolution-trade-relationships-1970">[VoxEU Article]</a>
-    <a href="https://voxdev.org/topic/trade/international-friends-and-enemies">[VoxDEV Article]</a>
-    <a href="https://www.economist.com/finance-and-economics/2022/05/25/how-economic-interdependence-fosters-alliances-and-democracy">[Economist Free Exchange]</a>
-  </span>
-  <span class="venue"><em>American Economic Journal: Macroeconomics</em>, 16(4), 350&ndash;385, 2024</span>
-</p>
-
-<p class="paper">
-  <a class="title" href="https://www.dropbox.com/scl/fi/o7qdk9jfilranisrx6lf8/LAEG_AEA.pdf?rlkey=okv2l9jfl10i7tkt4u2kfv1p5&amp;dl=0">The Linear Algebra of Economic Geography Models</a>, with
-  <a class="coauthor" href="https://ernestliu.scholar.princeton.edu/">Ernest Liu</a> and
-  <a class="coauthor" href="https://stephenredding.github.io/">Stephen Redding</a>
-  <span class="extra">
-    <a href="https://www.aeaweb.org/articles?id=10.1257/pandp.20241043">[Published Version]</a>
-    <a href="https://www.dropbox.com/scl/fi/xrv7kjgcwpwour0j8eoi8/LAEG_Appendix.pdf?rlkey=cietev5gmeeuqcdu8unxga2ox&amp;dl=0">[Online Appendix]</a>
-  </span>
-  <span class="venue"><em>AEA Papers and Proceedings</em>, 114, 328&ndash;333, 2024</span>
-</p>
-
-<p class="paper">
-  <a class="title" href="https://www.dropbox.com/scl/fi/pun3hz7xwm53wigmb914m/AEGGE_Paper.pdf?rlkey=cma6esoxcy3oe2f4ui3vh1set&amp;dl=0">Accommodating Emerging Giants in the Global Economy</a>, with
-  <a class="coauthor" href="https://www.economics.harvard.edu/people/zhuokai-huang">Zhuokai Huang</a>,
-  <a class="coauthor" href="https://ernestliu.scholar.princeton.edu/">Ernest Liu</a>, and
-  <a class="coauthor" href="https://stephenredding.github.io/">Stephen Redding</a>
-  <span class="extra">
-    <a href="https://doi.org/10.1057/s41308-026-00312-6">[Published Version]</a>
-    <a href="https://www.dropbox.com/scl/fi/4we36mvozcgun229s8rjo/AEGGE_Appendix.pdf?rlkey=bfx1fstapo7b8mpa950rjssdz&amp;st=e911vdbu&amp;dl=0">[Online Appendix]</a>
-    <a href="https://cepr.org/voxeu/columns/accommodating-emerging-giants-global-economy">[VoxEU Article]</a>
-  </span>
-  <span class="venue"><em>IMF Economic Review</em>, 2026, Special Issue for the 26th Annual Jacques Polak Conference of the International Monetary Fund (IMF)</span>
-</p>
-
-<footer>&copy; Benny Kleinman</footer>
-
 </div>
+
+<div class="paper">
+  <a class="title" href="https://www.dropbox.com/scl/fi/vs49sbinp1jhqmqed74l1/SSTD_Paper.pdf?rlkey=ezb3bbejbw461h33s9a0wec84&amp;dl=0">Dynamic Spatial General Equilibrium</a>
+  <span class="meta">with <a href="https://ernestliu.scholar.princeton.edu/">Ernest Liu</a> and <a href="https://stephenredding.github.io/">Stephen Redding</a> · <em>Econometrica</em>, 91(2), 385&ndash;424, 2023 (lead article)</span>
+  <span class="links">
+    <a href="https://onlinelibrary.wiley.com/doi/full/10.3982/ECTA20273">Published Version</a>
+    <a href="https://www.dropbox.com/scl/fi/ztd65mqcvm2kdlbmg05aq/SSTD_Appendix.pdf?rlkey=hbbf63jkzi55ul71wblim5ugr&amp;dl=0">Online Appendix</a>
+    <a href="https://www.dropbox.com/scl/fi/jxzzeidxbyysgnpj7woza/SSTD_Supplement.pdf?rlkey=73uvl6wqchxc8a55ue5e5rurc&amp;dl=0">Online Supplement</a>
+    <a href="https://www.dropbox.com/scl/fi/83xrxo0my9pqz7o8txpde/DSGE_Toolkit.zip?rlkey=hqrwe33dzvqia2mwkooxfjlo5&amp;dl=0">Model Economy Toolkit</a>
+    <a href="https://www.dropbox.com/scl/fi/grmnd5q971w6p3bbxvvn5/SSTD_present.pdf?rlkey=2jwefdtvfh07kdblnjr997ke1&amp;dl=0">Slides</a>
+    <a href="https://www.econometricsociety.org/publications/econometrica/2023/03/01/Dynamic-Spatial-General-Equilibrium/supp/20273_Data_and_Programs.zip">Data and Code</a>
+  </span>
+</div>
+
+<div class="paper">
+  <a class="title" href="https://www.dropbox.com/scl/fi/lwhbqfo25yuty52pkil4a/IFE_Paper.pdf?rlkey=fapa4be3g1kgfgi9otfhwdr2p&amp;dl=0">International Friends and Enemies</a>
+  <span class="meta">with <a href="https://ernestliu.scholar.princeton.edu/">Ernest Liu</a> and <a href="https://stephenredding.github.io/">Stephen Redding</a> · <em>American Economic Journal: Macroeconomics</em>, 16(4), 350&ndash;385, 2024</span>
+  <span class="links">
+    <a href="https://www.aeaweb.org/articles?id=10.1257/mac.20220223">Published Version</a>
+    <a href="https://www.dropbox.com/scl/fi/wizhbbk0qrzbugsavjhfm/IFE_Appendix.pdf?rlkey=73tzqnph4pfzlfarnt2ysvywi&amp;dl=0">Online Appendix</a>
+    <a href="https://www.dropbox.com/scl/fi/pdsek5uyyv5lszn17ar8e/IFE_present_20March2022sr_dist.pdf?rlkey=ksum49kgr3wdm9osdhtvjin5m&amp;dl=0">Slides</a>
+    <a href="https://doi.org/10.3886/E194041V1">Data and Code</a>
+    <a href="https://blogs.lse.ac.uk/businessreview/2020/09/15/productivity-growth-in-one-country-affects-the-relative-income-and-welfare-of-its-trade-partners/">LSE Business Review</a>
+    <a href="https://voxeu.org/article/modelling-evolution-trade-relationships-1970">VoxEU</a>
+    <a href="https://voxdev.org/topic/trade/international-friends-and-enemies">VoxDev</a>
+    <a href="https://www.economist.com/finance-and-economics/2022/05/25/how-economic-interdependence-fosters-alliances-and-democracy">The Economist</a>
+  </span>
+</div>
+
+<div class="paper">
+  <a class="title" href="https://www.dropbox.com/scl/fi/o7qdk9jfilranisrx6lf8/LAEG_AEA.pdf?rlkey=okv2l9jfl10i7tkt4u2kfv1p5&amp;dl=0">The Linear Algebra of Economic Geography Models</a>
+  <span class="meta">with <a href="https://ernestliu.scholar.princeton.edu/">Ernest Liu</a> and <a href="https://stephenredding.github.io/">Stephen Redding</a> · <em>AEA Papers and Proceedings</em>, 114, 328&ndash;333, 2024</span>
+  <span class="links">
+    <a href="https://www.aeaweb.org/articles?id=10.1257/pandp.20241043">Published Version</a>
+    <a href="https://www.dropbox.com/scl/fi/xrv7kjgcwpwour0j8eoi8/LAEG_Appendix.pdf?rlkey=cietev5gmeeuqcdu8unxga2ox&amp;dl=0">Online Appendix</a>
+  </span>
+</div>
+
+<div class="paper">
+  <a class="title" href="https://www.dropbox.com/scl/fi/pun3hz7xwm53wigmb914m/AEGGE_Paper.pdf?rlkey=cma6esoxcy3oe2f4ui3vh1set&amp;dl=0">Accommodating Emerging Giants in the Global Economy</a>
+  <span class="meta">with <a href="https://www.economics.harvard.edu/people/zhuokai-huang">Zhuokai Huang</a>, <a href="https://ernestliu.scholar.princeton.edu/">Ernest Liu</a>, and <a href="https://stephenredding.github.io/">Stephen Redding</a> · <em>IMF Economic Review</em>, 2026, Special Issue for the 26th Annual Jacques Polak Conference of the IMF</span>
+  <span class="links">
+    <a href="https://doi.org/10.1057/s41308-026-00312-6">Published Version</a>
+    <a href="https://www.dropbox.com/scl/fi/4we36mvozcgun229s8rjo/AEGGE_Appendix.pdf?rlkey=bfx1fstapo7b8mpa950rjssdz&amp;st=e911vdbu&amp;dl=0">Online Appendix</a>
+    <a href="https://cepr.org/voxeu/columns/accommodating-emerging-giants-global-economy">VoxEU</a>
+  </span>
+</div>
+</section>
+
+<footer>&copy; Benny Kleinman · Department of Economics, Stanford University</footer>
+
+</main>
 </body>
 </html>

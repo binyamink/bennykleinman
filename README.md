@@ -7,24 +7,24 @@ Personal academic website of Benny Kleinman, served with GitHub Pages.
 - `index.html` — the whole site (bio, contact, working papers, publications). Plain HTML, no build step.
 - `photo.jpg` — profile photo (from Dropbox/CV/Benny Kleinman Portraits/headshot-4x5-1000.jpg).
 - `stanford-wordmark.png` — official Stanford stacked wordmark (identity.stanford.edu), cardinal red.
+- `favicon.svg` — browser tab icon.
 - `CNAME` — custom domain (www.bennykleinman.com).
 - `.nojekyll` — tells GitHub Pages to serve files as-is.
 
 ## Updating
 
-Each paper is one `<p class="paper">` block in `index.html`:
+Each paper is one `<div class="paper">` block in `index.html`:
 
 ```html
-<p class="paper">
-  <a class="title" href="PAPER_URL">Paper Title</a>, with
-  <a class="coauthor" href="COAUTHOR_URL">Coauthor Name</a>
-  <span class="extra">
-    <a href="APPENDIX_URL">[Online Appendix]</a>
+<div class="paper">
+  <a class="title" href="PAPER_URL">Paper Title</a>
+  <span class="meta">with <a href="COAUTHOR_URL">Coauthor Name</a> · Revise and resubmit, <em>Journal Name</em></span>
+  <span class="links">
+    <a href="APPENDIX_URL">Online Appendix</a>
   </span>
-  <span class="venue">Revise and resubmit, <em>Journal Name</em></span>
-</p>
+</div>
 ```
 
 To add a paper, copy a block and edit it. To move a paper from Working Papers to
-Publications, cut the block and paste it under the `PUBLICATIONS` comment.
+Publications, cut the block and paste it into the `publications` section.
 Commit to `main` and the site updates within about a minute.
