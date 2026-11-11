@@ -7,6 +7,7 @@ Personal academic website of Benny Kleinman, served with GitHub Pages.
 - `index.html` — the whole site (bio, contact, working papers, publications). Plain HTML, no build step.
 - `photo.jpg` — profile photo (from Dropbox/CV/Benny Kleinman Portraits/headshot-4x5-1000.jpg).
 - `stanford-wordmark.png` — official Stanford stacked wordmark (identity.stanford.edu), cardinal red.
+- `papers/` — paper PDFs hosted on the site (better for Google Scholar indexing than Drive/Dropbox links). Replace a file in place to update it; the address stays the same.
 - `favicon.svg` — browser tab icon.
 - `404.html` — "page not found" page; also forwards old file addresses (bk_JMP.pdf, bk_CV.pdf, …) that other sites still link to. Edit the REDIRECTS list in it to add more.
 - `CNAME` — custom domain (www.bennykleinman.com).
