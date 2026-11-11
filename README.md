@@ -5,7 +5,9 @@ Personal academic website of Benny Kleinman, served with GitHub Pages.
 ## Structure
 
 - `index.html` — the whole site (bio, contact, working papers, publications). Plain HTML, no build step.
-- `photo.jpg` — profile photo.
+- `photo.jpg` — profile photo (from Dropbox/CV/Benny Kleinman Portraits/headshot-4x5-1000.jpg).
+- `stanford-wordmark.png` — official Stanford stacked wordmark (identity.stanford.edu), cardinal red.
+- `CNAME` — custom domain (www.bennykleinman.com).
 - `.nojekyll` — tells GitHub Pages to serve files as-is.
 
 ## Updating

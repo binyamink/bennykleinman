@@ -9,7 +9,7 @@
 <meta property="og:image" content="photo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;1,400&family=Merriweather:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;1,400&family=Merriweather:ital,wght@0,300;0,700;1,300&family=Montserrat:wght@400&display=swap" rel="stylesheet">
 <style>
   :root { --link: #1a4d8c; --text: #1a1a1a; --muted: #333; }
   * { box-sizing: border-box; }
@@ -23,9 +23,12 @@
     background: #fff;
   }
   a { color: var(--link); }
+  .topbar { display: flex; align-items: center; gap: 22px; padding: 14px 34px; }
+  .topbar img { height: 32px; width: auto; display: block; }
+  .topbar .site-name { font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; font-size: 19px; color: #222; }
   .wrap { max-width: 920px; margin: 0 auto; padding: 0 24px; }
   h1, h2, h3 { font-family: "Bitter", Georgia, serif; font-weight: 400; color: #000; }
-  h1.name { text-align: center; font-size: 46px; margin: 96px 0 72px; }
+  h1.name { text-align: center; font-size: 46px; margin: 56px 0 72px; }
   .intro { display: flex; gap: 32px; align-items: flex-start; }
   .intro .bio { flex: 1; text-align: justify; }
   .intro img { width: 212px; height: auto; display: block; }
@@ -49,6 +52,10 @@
 </style>
 </head>
 <body>
+<header class="topbar">
+  <a href="https://www.stanford.edu/"><img src="stanford-wordmark.png" alt="Stanford University"></a>
+  <span class="site-name">Benny Kleinman</span>
+</header>
 <div class="wrap">
 
 <h1 class="name">Benny Kleinman</h1>
@@ -92,7 +99,8 @@
   <a class="coauthor" href="https://sites.google.com/site/motohiroyogo/">Motohiro Yogo</a>
   <span class="extra">
     <a href="https://www.dropbox.com/scl/fi/56uhzgm5ysf02wefd5ow8/NGIW_Appendix.pdf?rlkey=0789ouhhfzaybctc2kknzblnj&amp;e=1&amp;dl=0">[Online Appendix]</a>
-    <a href="https://bfi.uchicago.edu/insight/research-summary/neoclassical-growth-in-an-interdependent-world/">[VoxEU Article] [Becker Friedman Research Brief]</a>
+    <a href="https://cepr.org/voxeu/columns/neoclassical-growth-interdependent-world">[VoxEU Article]</a>
+    <a href="https://bfi.uchicago.edu/insight/research-summary/neoclassical-growth-in-an-interdependent-world/">[Becker Friedman Research Brief]</a>
   </span>
   <span class="venue">Revise and resubmit, <em>American Economic Review</em></span>
 </p>
