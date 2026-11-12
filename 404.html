@@ -11,7 +11,7 @@
   var REDIRECTS = {
     "bk_jmp.pdf":       "/papers/Kleinman_WISE.pdf",
     "kleinman_jmp.pdf": "/papers/Kleinman_WISE.pdf",
-    "bk_cv.pdf":        "https://drive.google.com/file/d/19pyhPtFAmM6ek5MfITnjPmLK5Vb5W4-4/view?usp=sharing"
+    "bk_cv.pdf":        "/cv.pdf"
   };
   var file = location.pathname.split("/").pop().toLowerCase();
   if (REDIRECTS[file]) { location.replace(REDIRECTS[file]); }
